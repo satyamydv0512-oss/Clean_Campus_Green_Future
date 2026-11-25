@@ -1,0 +1,764 @@
+
+/* ==============================
+   GLOBAL STYLING
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7faf7;
+    color: #26352c;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+}
+
+
+/* ==============================
+   HEADER
+================================= */
+
+.header {
+    width: 100%;
+    min-height: 78px;
+    padding: 12px 6%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.06);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-icon {
+    width: 43px;
+    height: 43px;
+    background: #e6f5e9;
+    display: grid;
+    place-items: center;
+    border-radius: 12px;
+    font-size: 25px;
+}
+
+.logo h2 {
+    color: #bd1832;
+    font-size: 19px;
+    line-height: 1.2;
+}
+
+.logo p {
+    color: #25834a;
+    font-size: 10px;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.header nav {
+    display: flex;
+    gap: 25px;
+}
+
+.header nav a {
+    color: #3f5145;
+    font-size: 13px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.header nav a:hover {
+    color: #bd1832;
+}
+
+.header-btn {
+    background: #bd1832;
+    color: white;
+    padding: 11px 18px;
+    border-radius: 7px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+/* ==============================
+   HERO SECTION
+================================= */
+
+.hero {
+    min-height: 510px;
+    margin: 25px 5%;
+    border-radius: 18px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 55px;
+    background:
+        linear-gradient(
+            100deg,
+            rgba(13, 45, 29, 0.92),
+            rgba(19, 72, 41, 0.75),
+            rgba(160, 19, 47, 0.30)
+        ),
+        url("images/lpu-campus.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(9, 35, 22, 0.25),
+        transparent
+    );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 620px;
+    color: white;
+}
+
+.tag {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 8px 14px;
+    border-radius: 30px;
+    color: #d8f4df;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    font-weight: bold;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 5vw, 60px);
+    line-height: 1.15;
+    margin: 23px 0 18px;
+    color: white;
+}
+
+.hero h1 span {
+    color: #a8e6b5;
+}
+
+.hero-content > p {
+    max-width: 520px;
+    font-size: 15px;
+    line-height: 1.9;
+    color: #e6f0e8;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 13px;
+    flex-wrap: wrap;
+    margin-top: 28px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 21px;
+    border-radius: 7px;
+    font-size: 13px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-red {
+    background: #bd1832;
+    color: white;
+}
+
+.btn-red:hover {
+    background: #941128;
+    transform: translateY(-3px);
+}
+
+.btn-white {
+    background: white;
+    color: #216b40;
+}
+
+.btn-white:hover {
+    background: #e9f6eb;
+    transform: translateY(-3px);
+}
+
+.hero-note {
+    margin-top: 35px;
+    font-size: 13px;
+    color: #d6f0dc;
+    font-weight: bold;
+}
+
+
+/* ==============================
+   STATISTICS
+================================= */
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin: 0 5% 70px;
+}
+
+.stat-card {
+    background: white;
+    padding: 25px 15px;
+    text-align: center;
+    border-radius: 12px;
+    border: 1px solid #e9eee9;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.04);
+    transition: 0.3s;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-icon {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.stat-card h2 {
+    color: #bd1832;
+    font-size: 25px;
+}
+
+.stat-card p {
+    color: #718078;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+
+/* ==============================
+   COMMON SECTION
+================================= */
+
+.section {
+    padding: 65px 7%;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 40px;
+}
+
+.small-title {
+    color: #27834b;
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.section-heading h2 {
+    color: #243d2e;
+    font-size: clamp(25px, 3vw, 34px);
+    margin: 10px 0;
+}
+
+.section-heading p {
+    color: #7a887f;
+    font-size: 14px;
+}
+
+
+/* ==============================
+   ABOUT SECTION
+================================= */
+
+.about {
+    background: white;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.about-card {
+    background: #f7faf7;
+    padding: 30px;
+    border: 1px solid #e7eee8;
+    border-radius: 13px;
+    transition: 0.3s;
+}
+
+.about-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+}
+
+.about-icon {
+    width: 58px;
+    height: 58px;
+    display: grid;
+    place-items: center;
+    background: #e4f4e8;
+    border-radius: 13px;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.about-card h3 {
+    font-size: 18px;
+    color: #294b35;
+    margin-bottom: 10px;
+}
+
+.about-card p {
+    font-size: 13px;
+    color: #77857b;
+    line-height: 1.8;
+}
+
+
+/* ==============================
+   REPORT SECTION
+================================= */
+
+.report-section {
+    background: #f3f8f3;
+}
+
+.report-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 35px;
+    align-items: start;
+}
+
+.report-info {
+    background: #1f5735;
+    color: white;
+    padding: 35px;
+    border-radius: 15px;
+}
+
+.report-info h3 {
+    font-size: 23px;
+    margin-bottom: 27px;
+}
+
+.report-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.report-item > span {
+    font-size: 25px;
+    background: rgba(255, 255, 255, 0.12);
+    padding: 9px;
+    border-radius: 9px;
+}
+
+.report-item h4 {
+    font-size: 15px;
+    margin-bottom: 4px;
+}
+
+.report-item p {
+    color: #d1e3d5;
+    font-size: 12px;
+}
+
+.form-card,
+.idea-form {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+}
+
+.form-card h3,
+.idea-form h3 {
+    color: #274b34;
+    font-size: 21px;
+}
+
+.form-description {
+    color: #849087;
+    font-size: 12px;
+    margin: 5px 0 20px;
+}
+
+form label {
+    display: block;
+    color: #405247;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 15px 0 7px;
+}
+
+form input,
+form select,
+form textarea {
+    width: 100%;
+    padding: 12px 13px;
+    border: 1px solid #dce5dd;
+    background: #fbfdfb;
+    border-radius: 7px;
+    outline: none;
+    font-size: 13px;
+    color: #36473c;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+    border-color: #27834b;
+    box-shadow: 0 0 0 3px rgba(39, 131, 75, 0.10);
+}
+
+form textarea {
+    resize: vertical;
+}
+
+.submit-btn {
+    width: 100%;
+    margin-top: 20px;
+    padding: 14px;
+    background: #bd1832;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background: #941128;
+}
+
+.form-note {
+    text-align: center;
+    color: #9aa59d;
+    font-size: 10px;
+    margin-top: 12px;
+}
+
+
+/* ==============================
+   GREEN IDEAS
+================================= */
+
+.ideas-section {
+    background: white;
+}
+
+.ideas-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-bottom: 40px;
+}
+
+.idea-card {
+    padding: 27px;
+    background: #f6faf6;
+    border: 1px solid #e6eee7;
+    border-radius: 13px;
+    transition: 0.3s;
+}
+
+.idea-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+}
+
+.idea-icon {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.idea-category {
+    display: block;
+    color: #27834b;
+    font-size: 9px;
+    font-weight: bold;
+    letter-spacing: 1.3px;
+}
+
+.idea-card h3 {
+    font-size: 19px;
+    color: #294b35;
+    margin: 9px 0;
+}
+
+.idea-card p {
+    font-size: 13px;
+    color: #77857b;
+    line-height: 1.8;
+    min-height: 70px;
+}
+
+.idea-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    border-top: 1px solid #e3ebe4;
+    margin-top: 20px;
+    padding-top: 14px;
+    color: #428358;
+    font-size: 10px;
+}
+
+.idea-form {
+    max-width: 650px;
+    margin: auto;
+    border: 1px solid #e8eee8;
+}
+
+
+/* ==============================
+   ACTION BANNER
+================================= */
+
+.action-banner {
+    margin: 25px 5%;
+    padding: 40px;
+    background: linear-gradient(110deg, #174b2d, #267448);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    color: white;
+}
+
+.action-banner span {
+    color: #bce7c7;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    font-weight: bold;
+}
+
+.action-banner h2 {
+    font-size: clamp(23px, 3vw, 31px);
+    margin: 8px 0;
+}
+
+.action-banner p {
+    color: #d4e8d9;
+    font-size: 13px;
+}
+
+
+/* ==============================
+   CONTACT
+================================= */
+
+.contact-section {
+    background: #f7faf7;
+}
+
+.contact-card {
+    max-width: 550px;
+    margin: auto;
+    padding: 35px;
+    background: white;
+    border: 1px solid #e8eee8;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.contact-icon {
+    font-size: 40px;
+}
+
+.contact-card h3 {
+    color: #284b34;
+    margin: 12px 0 5px;
+}
+
+.contact-card p {
+    color: #839087;
+    font-size: 12px;
+    margin-bottom: 18px;
+}
+
+.contact-card a {
+    color: #bd1832;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+
+/* ==============================
+   FOOTER
+================================= */
+
+.footer {
+    padding: 30px 15px;
+    background: #183b27;
+    color: white;
+    text-align: center;
+}
+
+.footer-logo {
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.footer p {
+    font-size: 12px;
+    color: #c9ddce;
+}
+
+.footer .copyright {
+    margin-top: 12px;
+    font-size: 10px;
+    color: #9db4a3;
+}
+
+
+/* ==============================
+   RESPONSIVE DESIGN
+================================= */
+
+@media (max-width: 900px) {
+
+    .header {
+        padding: 12px 4%;
+        flex-wrap: wrap;
+    }
+
+    .header nav {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .hero {
+        margin: 20px 3%;
+        padding: 35px;
+    }
+
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+
+    .report-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .header {
+        justify-content: center;
+    }
+
+    .header nav {
+        gap: 12px;
+    }
+
+    .header nav a {
+        font-size: 11px;
+    }
+
+    .header-btn {
+        display: none;
+    }
+
+    .hero {
+        min-height: 480px;
+        padding: 25px;
+        background-position: center;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero-content > p {
+        font-size: 13px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .stats {
+        gap: 10px;
+    }
+
+    .stat-card {
+        padding: 18px 8px;
+    }
+
+    .stat-card h2 {
+        font-size: 21px;
+    }
+
+    .section {
+        padding: 45px 5%;
+    }
+
+    .about-grid,
+    .ideas-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .report-info,
+    .form-card,
+    .idea-form {
+        padding: 22px;
+    }
+
+    .action-banner {
+        margin: 20px 3%;
+        padding: 28px 22px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .contact-card {
+        padding: 25px 15px;
+    }
+}
